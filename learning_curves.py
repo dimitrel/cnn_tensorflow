@@ -1,13 +1,26 @@
 # -*- coding: utf-8 -*-
-"""Parameter initialisers.
-
-This function provides us with infromative plots about error and accuracy scores.
 """
+The following module is used for plotting the learning curves for a neural networks which provide us with insight 
+about the performance and hyperparamee selection.
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 
 def plot_lc(train_stats, valid_stats, num_epochs, label=None):
+	"""Plot learning curves.
 
+	Args:
+		train_stats: tuple of lists with training error and training accuracy values in each epoch
+		valid_stats: tuple of lists with validation error and validation accuracy values in each epoch 
+		num_epochs: number of the epochs the network is trained for
+		label: label for the plots, depending on the experiment (e.g. number of layers, learning rate, etc)
+		
+	Returns:
+		fig_1: matplotlib object with training and validation error figures
+		fig_2: matplotlib object with training and validation accuracy figures
+		
+	"""
     fig_1 = plt.figure(figsize=(12, 6))
     fig_2 = plt.figure(figsize=(12, 6))
     ax1 = fig_1.add_subplot(1, 2, 1)

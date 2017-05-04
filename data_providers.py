@@ -9,7 +9,6 @@ import os
 import numpy as np
 from mlp import DEFAULT_SEED
 
-
 class DataProvider(object):
     """Generic data provider."""
 
@@ -42,8 +41,6 @@ class DataProvider(object):
         self._update_num_batches()
         self.shuffle_order = shuffle_order
         self._current_order = np.arange(inputs.shape[0])
-        if rng is None:
-            rng = np.random.RandomState(DEFAULT_SEED)
         self.rng = rng
         self.new_epoch()
 
