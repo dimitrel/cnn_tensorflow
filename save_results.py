@@ -29,6 +29,7 @@ def save_learning_curves(fig_1,fig_2,label=None):
 	Args:
 		fig_1: a matplotlib figure
 		fig_2: a matplotlib figure
+		label: defines the path directory for this experiment
 		
 	Returns:
 		no return value
